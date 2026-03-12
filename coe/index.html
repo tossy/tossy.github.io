@@ -1,0 +1,21 @@
+---
+layout: default
+title: CoE Log
+---
+<div class="category-header" style="border-top: 3px solid #4f7cac; padding-top: 1.5rem;">
+  <h1>CoE Log</h1>
+  <p>GenAI Center of Excellence — AI導入の現場から、実験・学び・気づきを記録する</p>
+</div>
+
+<ul class="post-list">
+  {% for post in site.coe reversed %}
+  <li class="post-item">
+    <div class="post-item-left">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </div>
+    <span class="post-meta">{{ post.date | date: "%Y.%m.%d" }}</span>
+  </li>
+  {% else %}
+  <li style="padding: 2rem 0; color: #777; font-size: 0.9rem;">記事はまだありません。</li>
+  {% endfor %}
+</ul>

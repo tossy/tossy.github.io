@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="home-hero">
+  <h1>そこにAI(愛)はあるのか</h1>
+  <p>AI × 人間 × 生きること — Toshi's Notes</p>
+</div>
+
+<div class="sections-grid">
+  <a href="/coe/" class="section-card card-coe">
+    <h2>CoE Log</h2>
+    <p>AI導入の現場から。GenAI CoEでの実験、学び、気づき。</p>
+  </a>
+  <a href="/ai-ai/" class="section-card card-aiai">
+    <h2>AI × 愛</h2>
+    <p>AIとの対話、哲学的な問い、人間とAIが共に考えること。</p>
+  </a>
+  <a href="/lifelog/" class="section-card card-life">
+    <h2>Life Log</h2>
+    <p>スノボ、料理、日常。AI以外の自分を記録する場所。</p>
+  </a>
+</div>
+
+<div class="recent-posts">
+  <h2>Recent Posts</h2>
+  <ul class="post-list">
+    {% assign all_posts = site.coe | concat: site.ai_ai | concat: site.lifelog | sort: 'date' | reverse %}
+    {% for post in all_posts limit: 10 %}
+    <li class="post-item">
+      <div class="post-item-left">
+        {% if post.category == "coe" %}
+          <span class="category-badge badge-coe">CoE</span>
+        {% elsif post.category == "ai_ai" %}
+          <span class="category-badge badge-aiai">AI × 愛</span>
+        {% elsif post.category == "lifelog" %}
+          <span class="category-badge badge-life">Life</span>
+        {% endif %}
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </div>
+      <span class="post-meta">{{ post.date | date: "%Y.%m.%d" }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

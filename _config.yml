@@ -1,0 +1,40 @@
+title: "そこにAI(愛)はあるのか"
+description: "AI × 人間 × 生きること — Toshi's Notes"
+url: "https://tossy.github.io"
+baseurl: ""
+author: Toshi
+
+collections:
+  coe:
+    output: true
+    permalink: /coe/:name/
+  ai_ai:
+    output: true
+    permalink: /ai-ai/:name/
+  lifelog:
+    output: true
+    permalink: /lifelog/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "coe"
+    values:
+      layout: "post"
+      category: "coe"
+  - scope:
+      path: ""
+      type: "ai_ai"
+    values:
+      layout: "post"
+      category: "ai_ai"
+  - scope:
+      path: ""
+      type: "lifelog"
+    values:
+      layout: "post"
+      category: "lifelog"
+
+markdown: kramdown
+highlighter: rouge
+lang: ja

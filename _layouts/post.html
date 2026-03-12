@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    {% if page.category == "coe" %}
+      <span class="category-badge badge-coe">CoE Log</span>
+    {% elsif page.category == "ai_ai" %}
+      <span class="category-badge badge-aiai">AI × 愛</span>
+    {% elsif page.category == "lifelog" %}
+      <span class="category-badge badge-life">Life Log</span>
+    {% endif %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.date %}
+      <time class="post-date">{{ page.date | date: "%Y年%-m月%-d日" }}</time>
+    {% endif %}
+    {% if page.tags %}
+      <div class="post-tags">
+        {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </header>
+  <div class="post-content">
+    {{ content }}
+  </div>
+  <footer class="post-footer">
+    {% if page.category == "coe" %}
+      <a href="{{ '/coe/' | relative_url }}" class="back-link">← CoE Log 一覧</a>
+    {% elsif page.category == "ai_ai" %}
+      <a href="{{ '/ai-ai/' | relative_url }}" class="back-link">← AI × 愛 一覧</a>
+    {% elsif page.category == "lifelog" %}
+      <a href="{{ '/lifelog/' | relative_url }}" class="back-link">← Life Log 一覧</a>
+    {% endif %}
+  </footer>
+</article>

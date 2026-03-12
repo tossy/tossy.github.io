@@ -1,0 +1,21 @@
+---
+layout: default
+title: AI × 愛
+---
+<div class="category-header" style="border-top: 3px solid #c4785a; padding-top: 1.5rem;">
+  <h1>AI × 愛</h1>
+  <p>AIとの対話、哲学的な問い — 人工知能と「愛」が交差する場所</p>
+</div>
+
+<ul class="post-list">
+  {% for post in site.ai_ai reversed %}
+  <li class="post-item">
+    <div class="post-item-left">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </div>
+    <span class="post-meta">{{ post.date | date: "%Y.%m.%d" }}</span>
+  </li>
+  {% else %}
+  <li style="padding: 2rem 0; color: #777; font-size: 0.9rem;">記事はまだありません。</li>
+  {% endfor %}
+</ul>

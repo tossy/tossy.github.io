@@ -1,0 +1,21 @@
+---
+layout: default
+title: Life Log
+---
+<div class="category-header" style="border-top: 3px solid #5a9e6f; padding-top: 1.5rem;">
+  <h1>Life Log</h1>
+  <p>スノボ、料理、日常 — AI以外の自分を記録する場所</p>
+</div>
+
+<ul class="post-list">
+  {% for post in site.lifelog reversed %}
+  <li class="post-item">
+    <div class="post-item-left">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </div>
+    <span class="post-meta">{{ post.date | date: "%Y.%m.%d" }}</span>
+  </li>
+  {% else %}
+  <li style="padding: 2rem 0; color: #777; font-size: 0.9rem;">記事はまだありません。</li>
+  {% endfor %}
+</ul>
