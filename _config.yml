@@ -5,9 +5,9 @@ baseurl: ""
 author: Toshi
 
 collections:
-  coe:
+  ai_learning:
     output: true
-    permalink: /coe/:name/
+    permalink: /ai-learning/:name/
   ai_ai:
     output: true
     permalink: /ai-ai/:name/
@@ -18,10 +18,10 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "coe"
+      type: "ai_learning"
     values:
       layout: "post"
-      category: "coe"
+      category: "ai_learning"
   - scope:
       path: ""
       type: "ai_ai"

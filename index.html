@@ -7,9 +7,9 @@ layout: default
 </div>
 
 <div class="sections-grid">
-  <a href="/coe/" class="section-card card-coe">
-    <h2>CoE Log</h2>
-    <p>AI導入の現場から。GenAI CoEでの実験、学び、気づき。</p>
+  <a href="/ai-learning/" class="section-card card-coe">
+    <h2>AI Learning</h2>
+    <p>AIツールの使い方、気づき、実験メモ。学んだことを残していく場所。</p>
   </a>
   <a href="/ai-ai/" class="section-card card-aiai">
     <h2>AI × 愛</h2>
@@ -24,12 +24,12 @@ layout: default
 <div class="recent-posts">
   <h2>Recent Posts</h2>
   <ul class="post-list">
-    {% assign all_posts = site.coe | concat: site.ai_ai | concat: site.lifelog | sort: 'date' | reverse %}
+    {% assign all_posts = site.ai_learning | concat: site.ai_ai | concat: site.lifelog | sort: 'date' | reverse %}
     {% for post in all_posts limit: 10 %}
     <li class="post-item">
       <div class="post-item-left">
-        {% if post.category == "coe" %}
-          <span class="category-badge badge-coe">CoE</span>
+        {% if post.category == "ai_learning" %}
+          <span class="category-badge badge-coe">AI Learning</span>
         {% elsif post.category == "ai_ai" %}
           <span class="category-badge badge-aiai">AI × 愛</span>
         {% elsif post.category == "lifelog" %}

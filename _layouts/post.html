@@ -3,8 +3,8 @@ layout: default
 ---
 <article class="post">
   <header class="post-header">
-    {% if page.category == "coe" %}
-      <span class="category-badge badge-coe">CoE Log</span>
+    {% if page.category == "ai_learning" %}
+      <span class="category-badge badge-coe">AI Learning</span>
     {% elsif page.category == "ai_ai" %}
       <span class="category-badge badge-aiai">AI × 愛</span>
     {% elsif page.category == "lifelog" %}
@@ -26,8 +26,8 @@ layout: default
     {{ content }}
   </div>
   <footer class="post-footer">
-    {% if page.category == "coe" %}
-      <a href="{{ '/coe/' | relative_url }}" class="back-link">← CoE Log 一覧</a>
+    {% if page.category == "ai_learning" %}
+      <a href="{{ '/ai-learning/' | relative_url }}" class="back-link">← AI Learning 一覧</a>
     {% elsif page.category == "ai_ai" %}
       <a href="{{ '/ai-ai/' | relative_url }}" class="back-link">← AI × 愛 一覧</a>
     {% elsif page.category == "lifelog" %}

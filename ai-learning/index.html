@@ -1,14 +1,14 @@
 ---
 layout: default
-title: CoE Log
+title: AI Learning
 ---
 <div class="category-header" style="border-top: 3px solid #4f7cac; padding-top: 1.5rem;">
-  <h1>CoE Log</h1>
-  <p>GenAI Center of Excellence — AI導入の現場から、実験・学び・気づきを記録する</p>
+  <h1>AI Learning</h1>
+  <p>AIツールの使い方、気づき、実験メモ — 学んだことを残していく場所</p>
 </div>
 
 <ul class="post-list">
-  {% for post in site.coe reversed %}
+  {% for post in site.ai_learning reversed %}
   <li class="post-item">
     <div class="post-item-left">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
